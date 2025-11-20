@@ -1,3 +1,4 @@
+from openai import OpenAI
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app import ai_routes
@@ -15,3 +16,4 @@ app.add_middleware(
 
 # ✅ Include routes
 app.include_router(ai_routes.router, prefix="/ai", tags=["AI"])
+
